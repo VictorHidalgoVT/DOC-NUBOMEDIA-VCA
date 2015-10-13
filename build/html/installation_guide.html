@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation guide &mdash; nubomedia-vca 6.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="nubomedia-vca 6.1 documentation" href="index.html"/>
+        <link rel="next" title="Developers guide" href="developers_guide.html"/>
+        <link rel="prev" title="What’s Nubomedia-vca?" href="what_is_nubomedia-vca.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> nubomedia-vca
+          
+
+          
+            
+            <img src="_static/nubomedia_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="what_is_nubomedia-vca.html">What&#8217;s Nubomedia-vca?</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Installation guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#previous-steps">Previous steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-filters-from-nubomedia-repositories">Installing filters from nubomedia repositories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-filters-and-demos-from-source-code">Installing filters and demos from source code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#run-the-demos">Run the demos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="developers_guide.html">Developers guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="APIs.html">Reference documentation of the APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">nubomedia-vca</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Installation guide</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/installation_guide.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation-guide">
+<span id="id1"></span><h1>Installation guide<a class="headerlink" href="#installation-guide" title="Permalink to this headline">¶</a></h1>
+<p>This sections is divided into parts. On the one hand, we will see how to install
+the filters using the repositories of the project. On the other hand we will see
+how to install the filters as both demos from source code.</p>
+<div class="section" id="previous-steps">
+<h2>Previous steps<a class="headerlink" href="#previous-steps" title="Permalink to this headline">¶</a></h2>
+<p>Before beginning these parts, you need to install the following packages:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">echo &quot;deb http://ubuntu.kurento.org trusty kms6&quot; | sudo tee /etc/apt/sources.list.d/kurento.list</span>
+<span class="go">wget -O - http://ubuntu.kurento.org/kurento.gpg.key | sudo apt-key add -</span>
+<span class="go">sudo apt-get update</span>
+<span class="go">sudo apt-get install kurento-media-server-6.0 kurento-media-server-6.0-dev</span>
+<span class="go">sudo apt-get install kms-core-6.0 kms-core-6.0</span>
+<span class="go">sudo apt-get install cimg-dev</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-filters-from-nubomedia-repositories">
+<h2>Installing filters from nubomedia repositories<a class="headerlink" href="#installing-filters-from-nubomedia-repositories" title="Permalink to this headline">¶</a></h2>
+<p>In order to isntall the latest stable version of the NUBOMEDIA-vca filters, you have type
+the following commands, one at time and in the same order as listed here. When asked for any
+kind of confirmation, reply affirmatively:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F04B5A6F</span>
+<span class="go">add-apt-repository &quot;deb http://repository.nubomedia.eu/ trusty main&quot;</span>
+<span class="go">apt-get update -y</span>
+<span class="go">apt-get install nubo-face-detector nubo-face-detector-dev nubo-mouth-detector</span>
+<span class="go">nubo-mouth-detector-dev nubo-nose-detector nubo-nose-detector-dev nubo-eye-detector</span>
+<span class="go">nubo-eye-detector-dev nubo-tracker nubo-tracker-dev  nubo-ear-detector</span>
+<span class="go">nubo-ear-detector-dev -y</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-filters-and-demos-from-source-code">
+<h2>Installing filters and demos from source code<a class="headerlink" href="#installing-filters-and-demos-from-source-code" title="Permalink to this headline">¶</a></h2>
+<p>In this section, we will see how to install all modules and demos from the source code.
+For this purpose, you need to clone the official repository on <a class="reference external" href="https://github.com/VictorHidalgoVT/NUBOMEDIA-VCA">GitHub</a> .</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">git clone https://github.com/VictorHidalgoVT/NUBOMEDIA-VCA.git nubo-vca</span>
+</pre></div>
+</div>
+<p>After cloning the repo is time to compile, follow these instructions</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">cd nubo-vca/</span>
+<span class="go">sh build.sh</span>
+</pre></div>
+</div>
+<p>If everything goes well, a new folder with the following content has been generated</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">output/</span>
+<span class="go">├── apps</span>
+<span class="go">│   ├── NuboEarJava.zip</span>
+<span class="go">│   ├── NuboEyeJava.zip</span>
+<span class="go">│   ├── NuboFaceJava.zip</span>
+<span class="go">│   ├── NuboFaceProfileJava.zip</span>
+<span class="go">│   ├── NuboMouthJava.zip</span>
+<span class="go">│   ├── NuboNoseJava.zip</span>
+<span class="go">│   └── NuboTrackerJava.zip</span>
+<span class="go">└── packages</span>
+<span class="go">    ├── nubo-ear-detector_0.0.4~rc1_amd64.deb</span>
+<span class="go">    ├── nubo-ear-detector-dev_0.0.4~rc1_amd64.deb</span>
+<span class="go">    ├── nubo-eye-detector_0.0.4~rc1_amd64.deb</span>
+<span class="go">    ├── nubo-eye-detector-dev_0.0.4~rc1_amd64.deb</span>
+<span class="go">    ├── nubo-face-detector_0.0.4~rc1_amd64.deb</span>
+<span class="go">    ├── nubo-face-detector-dev_0.0.4~rc1_amd64.deb</span>
+<span class="go">    ├── nubo-mouth-detector_0.0.4~rc1_amd64.deb</span>
+<span class="go">    ├── nubo-mouth-detector-dev_0.0.4~rc1_amd64.deb</span>
+<span class="go">    ├── nubo-nose-detector_0.0.4~rc1_amd64.deb</span>
+<span class="go">    ├── nubo-nose-detector-dev_0.0.4~rc1_amd64.deb</span>
+<span class="go">    ├── nubo-tracker_0.0.4~rc1_amd64.deb</span>
+<span class="go">    └── nubo-tracker-dev_0.0.4~rc1_amd64.deb</span>
+</pre></div>
+</div>
+<p>For install the filters, you need to run the following commands:</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">cd output/packages</span>
+<span class="go">sudo dpkg -i nubo-ear-detector_0.0.4~rc1_amd64.deb nubo-ear-detector-dev_0.0.4~rc1_amd64.deb</span>
+<span class="go">nubo-eye-detector_0.0.4~rc1_amd64.deb nubo-eye-detector-dev_0.0.4~rc1_amd64.deb</span>
+<span class="go">nubo-face-detector_0.0.4~rc1_amd64.deb nubo-face-detector-dev_0.0.4~rc1_amd64.deb</span>
+<span class="go">nubo-mouth-detector_0.0.4~rc1_amd64.deb nubo-mouth-detector-dev_0.0.4~rc1_amd64.deb</span>
+<span class="go">nubo-nose-detector_0.0.4~rc1_amd64.deb nubo-nose-detector-dev_0.0.4~rc1_amd64.deb</span>
+<span class="go">nubo-tracker_0.0.4~rc1_amd64.deb nubo-tracker-dev_0.0.4~rc1_amd64.deb</span>
+</pre></div>
+</div>
+<p>For install the demos, you need to run the following commands for every zip file contained in
+the output/apps folder. We will make the example for the face detector</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">cd output/apps</span>
+<span class="go">mkdir face</span>
+<span class="go">mv NuboFaceJava.zip face/</span>
+<span class="go">unzip -x NuboFaceJava.zip</span>
+<span class="go">sudo sh install.sh</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="run-the-demos">
+<h2>Run the demos<a class="headerlink" href="#run-the-demos" title="Permalink to this headline">¶</a></h2>
+<p>To run the difference demos, you need to acces the following url&#8217;s through a web browser
+compliant with WebRTC.</p>
+<div class="highlight-console"><div class="highlight"><pre><span class="go">- localhost:8100 =&gt; Face detector</span>
+<span class="go">- localhost:8102 =&gt; Nose detector</span>
+<span class="go">- localhost:8103 =&gt; Mouth detector</span>
+<span class="go">- localhost:8104 =&gt; Ear detector</span>
+<span class="go">- localhost:8105 =&gt; Face profile</span>
+<span class="go">- localhost:8107 =&gt; Tracker</span>
+<span class="go">- localhost:8108 =&gt; Eye detector</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="developers_guide.html" class="btn btn-neutral float-right" title="Developers guide" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="what_is_nubomedia-vca.html" class="btn btn-neutral" title="What’s Nubomedia-vca?" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Victor Hidalgo.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'6.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
