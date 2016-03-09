@@ -12,7 +12,7 @@ https://github.com/VTOOLS-FOSS/NUBOMEDIA-VCA
 
 # Support
 
-The NUBOMEDIA-VCA project provides community support through the [NUBOMEDIA-VCA Public Mailing List].
+The NUBOMEDIA-VCA project provide support through the [NUBOMEDIA-VCA Public Mailing List].
 
 [NUBOMEDIA-VCA Public Mailing List]: https://groups.google.com/d/forum/nubomedia-vca
 

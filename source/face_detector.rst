@@ -409,7 +409,6 @@ utility library (kurento-utils) for the client-side.
       <dependency> 
          <groupId>org.kurento</groupId>
          <artifactId>kurento-utils-js</artifactId>
-         <version>|CLIENT_JAVA_VERSION|</version>
       </dependency> 
    </dependencies>
 
@@ -446,5 +445,5 @@ follows:
    .. sourcecode:: js
 
       "dependencies": {
-         "kurento-utils": "|UTILS_JS_VERSION|"
+         "kurento-utils": "6.4.0"
       }
