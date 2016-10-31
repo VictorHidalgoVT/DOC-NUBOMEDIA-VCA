@@ -43,11 +43,11 @@ Installing filters and demos from source code
 
 In this section, we will see how to install all modules and demos from the
 source code. For this purpose, you need to clone the official repository on
-`GitHub  <https://github.com/VictorHidalgoVT/NUBOMEDIA-VCA>`__ .
+`GitHub  <https://github.com/nubomedia/NUBOMEDIA-VCA>`__ .
 
 .. sourcecode:: console
 
-  git clone https://github.com/VictorHidalgoVT/NUBOMEDIA-VCA.git nubo-vca
+  git clone https://github.com/nubomedia/NUBOMEDIA-VCA.git nubo-vca
 
 After cloning the repo is time to compile, follow these instructions
 
