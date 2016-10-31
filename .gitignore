@@ -1,0 +1,11 @@
+*~
+*.pyc
+build
+source/*/com
+source/langdocs
+.externalToolBuilders/*
+npm-debug.log
+.classpath
+.project
+.settings
+.DS_Store
