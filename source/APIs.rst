@@ -4,9 +4,9 @@
 Reference documentation of the APIs
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-On this section, we will see the different APIs to use every single filter. As it was explained
-on :doc:`what is nubomedia-vca <what_is_nubomedia-vca>`, the following filters are available to
-use in the NUBOMEDIA platform:
+On this section, we will see the different APIs to use every single filter. As
+it was explained on :doc:`what is nubomedia-vca <what_is_nubomedia-vca>`, the
+following filters are available to use in the NUBOMEDIA platform:
 
 - Face Detector
 - Mouth Detector
@@ -20,23 +20,26 @@ Now, let's see the API for the different filters.
 Face, Mouth, Nose, Eye and Ear Detector
 =======================================
 
-All this filters have a similiar API, for this reason, we are going to see all of them together.
+All this filters have a similiar API, for this reason, we are going to see all
+of them together.
 
 **NuboFaceDetector**
 
-This filter receives a stream of images as input. The output of the filter will be a 
-collection of bounding boxes. Each bounding box represents the position of each face in the image.
-A bounding box is an area defined by two points. It is very important to highlight that 
-this algorithm only detects frontal faces. Therefore, all the faces that are laterally focused will not be detected. 
+This filter receives a stream of images as input. The output of the filter will
+be a collection of bounding boxes. Each bounding box represents the position of
+each face in the image. A bounding box is an area defined by two points. It is
+very important to highlight that this algorithm only detects frontal faces.
+Therefore, all the faces that are laterally focused will not be detected.
 
 **NuboMouthDetector , NuboNoseDetector, NuboEarDetector, NuboEyeDetector**
 
-As for mouth, nose, eye and ear detector, these filters receive a stream of images as input.
-The output of each filter will be a collection of bounding boxes. Each bounding box represents 
-the position of each mouth,nose, eye and  found in the image. These algorithms needs to detect
-previously the different faces included on the image, with the exception of the ear detector 
-which have to detect the side of the face. The faces can be detected by its own,
-or can be received as an input.
+As for mouth, nose, eye and ear detector, these filters receive a stream of
+images as input. The output of each filter will be a collection of bounding
+boxes. Each bounding box represents the position of each mouth,nose, eye and
+found in the image. These algorithms needs to detect previously the different
+faces included on the image, with the exception of the ear detector which have
+to detect the side of the face. The faces can be detected by its own, or can be
+received as an input.
 
 The developers can use the following API for this filter:
 
@@ -85,8 +88,7 @@ void **processXevery4Frames(int)**  | To indicate the number of frames that the 
 				    |  - 4, processes four images  (24 fps)
 =================================== ===========================================================
 
-\* **showX** can be depending on the algorithm: showFaces(int), showNoses(int), showMouths(int),
-showEyes(int), showEars(int).
+\* **showX** can be depending on the algorithm: showFaces(int), showNoses(int), showMouths(int), showEyes(int), showEars(int).
 
 Tracker
 =======

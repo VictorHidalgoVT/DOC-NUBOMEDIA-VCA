@@ -10,24 +10,26 @@ What's Nubomedia-vca?
    :width:   240
 	     
 	     
-**Nubomedia-vca** is a part of the `Nubomedia project <http://www.nubomedia.eu>`__ .
+**Nubomedia-vca** is a part of the
+`Nubomedia project <http://www.nubomedia.eu>`__ .
 
-NUBOMEDIA is the first cloud platform specifically designed for hosting interactive 
-multimedia services. NUBOMEDIA exposes to developers PaaS APIs for creating media pipelines.
-A media pipeline is a  chain of elements providing media capabilities such as encryption, 
-transcoding, augmented reality or video content analysis. These chains allow building arbitrarily
-complex media processing for applications. As a unique feature, from the point of view
-of the pipelines, the NUBOMEDIA cloud infrastructure behaves as a single virtual super-computer
-encompassing all the available resources of the physical network.
+NUBOMEDIA is the first cloud platform specifically designed for hosting
+interactive multimedia services. NUBOMEDIA exposes to developers PaaS APIs for
+creating media pipelines. A media pipeline is a  chain of elements providing
+media capabilities such as encryption, transcoding, augmented reality or video
+content analysis. These chains allow building arbitrarily complex media
+processing for applications. As a unique feature, from the point of view of the
+pipelines, the NUBOMEDIA cloud infrastructure behaves as a single virtual
+super-computer encompassing all the available resources of the physical network.
 
-In particular, this part of the project is in charge of the computer vision technology,
-through which the developers can apply different computer vision filters to their 
-pipelines.
+In particular, this part of the project is in charge of the computer vision
+technology, through which the developers can apply different computer vision
+filters to their pipelines.
 
 
-Through this documentation you can learn how to install :doc:`install <installation_guide>`,
-develop using the API of the following :doc:`installVCA filters <filters>` of the 
-NUBOMEDIA project:
+Through this documentation you can learn how to install
+:doc:`install <installation_guide>`, develop using the API of the following
+:doc:`installVCA filters <filters>` of the NUBOMEDIA project:
 
 - Face Detector
 - Mouth Detector
@@ -36,4 +38,5 @@ NUBOMEDIA project:
 - Ear Detector
 - Tracker
 
-Futhermore, you can find information about :doc:`demos <demos>` in order to  test the different filters.
+Futhermore, you can find information about :doc:`demos <demos>` in order to test
+the different filters.
