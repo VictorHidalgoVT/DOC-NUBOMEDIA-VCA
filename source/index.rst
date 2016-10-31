@@ -11,7 +11,8 @@ Welcome to nubomedia-vca's documentation!
    :align:  center
    :width:  240
 
-Contents:
+Contents
+--------
 
 .. toctree::
    :maxdepth: 2
