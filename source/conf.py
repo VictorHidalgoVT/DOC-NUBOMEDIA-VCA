@@ -47,8 +47,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'nubomedia-vca'
-copyright = u'2015, Victor Hidalgo'
-author = u'Victor Hidalgo'
+copyright = u'2016, NUBOMEDIA'
+author = u'NUBOMEDIA'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -225,7 +225,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   (master_doc, 'nubomedia-vca.tex', u'nubomedia-vca Documentation',
-   u'Victor Hidalgo', 'manual'),
+   u'NUBOMEDIA', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
