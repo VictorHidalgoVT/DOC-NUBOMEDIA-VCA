@@ -95,3 +95,5 @@ The NUBOMEDIA community provides support through the [NUBOMEDIA Public Mailing L
 [NUBOMEDIA Twitter]: https://twitter.com/nubomedia
 [NUBOMEDIA Public Mailing list]: https://groups.google.com/forum/#!forum/nubomedia-dev
 [NUBOMEDIA]: http://www.nubomedia.eu
+[Sphinx]: http://sphinx-doc.org/
+[Read-the-docs]: http://read-the-docs.readthedocs.org/
