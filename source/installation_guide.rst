@@ -60,21 +60,28 @@ generated
 
 .. sourcecode:: console 
 
-  output/ ├── apps │   ├── NuboEarJava.zip │   ├── NuboEyeJava.zip │   ├──
-  NuboFaceJava.zip │   ├── NuboFaceProfileJava.zip │   ├── NuboMouthJava.zip
-  │   ├── NuboNoseJava.zip │   └── NuboTrackerJava.zip └── packages
-      ├── nubo-ear-detector_0.0.4~rc1_amd64.deb ├──
-      nubo-ear-detector-dev_0.0.4~rc1_amd64.deb ├──
-      nubo-eye-detector_0.0.4~rc1_amd64.deb ├──
-      nubo-eye-detector-dev_0.0.4~rc1_amd64.deb ├──
-      nubo-face-detector_0.0.4~rc1_amd64.deb ├──
-      nubo-face-detector-dev_0.0.4~rc1_amd64.deb ├──
-      nubo-mouth-detector_0.0.4~rc1_amd64.deb ├──
-      nubo-mouth-detector-dev_0.0.4~rc1_amd64.deb ├──
-      nubo-nose-detector_0.0.4~rc1_amd64.deb ├──
-      nubo-nose-detector-dev_0.0.4~rc1_amd64.deb ├──
-      nubo-tracker_0.0.4~rc1_amd64.deb └── nubo-tracker-dev_0.0.4~rc1_amd64.deb
-
+	 output/
+	 ├── apps
+	 │   ├── NuboEarJava.zip
+	 │   ├── NuboEyeJava.zip
+	 │   ├── NuboFaceJava.zip
+	 │   ├── NuboFaceProfileJava.zip
+	 │   ├── NuboMouthJava.zip
+	 │   ├── NuboNoseJava.zip
+	 │   └── NuboTrackerJava.zip
+	 └── packages
+	     ├── nubo-ear-detector_0.0.4~rc1_amd64.deb
+	     ├── nubo-ear-detector-dev_0.0.4~rc1_amd64.deb
+	     ├── nubo-eye-detector_0.0.4~rc1_amd64.deb
+	     ├── nubo-eye-detector-dev_0.0.4~rc1_amd64.deb
+	     ├── nubo-face-detector_0.0.4~rc1_amd64.deb
+	     ├── nubo-face-detector-dev_0.0.4~rc1_amd64.deb
+	     ├── nubo-mouth-detector_0.0.4~rc1_amd64.deb
+	     ├── nubo-mouth-detector-dev_0.0.4~rc1_amd64.deb
+	     ├── nubo-nose-detector_0.0.4~rc1_amd64.deb
+	     ├── nubo-nose-detector-dev_0.0.4~rc1_amd64.deb
+	     ├── nubo-tracker_0.0.4~rc1_amd64.deb
+	     └── nubo-tracker-dev_0.0.4~rc1_amd64.deb
 
 For install the filters, you need to run the following commands:
 
