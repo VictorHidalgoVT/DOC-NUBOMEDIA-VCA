@@ -437,7 +437,7 @@ properties section:
    <maven.compiler.source>1.7</maven.compiler.source>
 
 Browser dependencies (i.e. *bootstrap*, *ekko-lightbox*, and *adapter.js*) are
-handled with :term:`Bower`. This dependencies are defined in the file bower.json.
+handled with `Bower <http://bower.io/>`_. This dependencies are defined in the file bower.json.
 The command ``bower install`` is automatically called from Maven. Thus, Bower
 should be present in your system. It can be installed in an Ubuntu machine as
 follows:
