@@ -17,37 +17,13 @@ capabilites.
 
 Here we are going to see the following examples:
 
-NuboFaceDetector
-================
+.. toctree:: :maxdepth: 1
 
-- You can access to this example :doc:`here <face_detector>`
-
-NuboNoseDetector
-================
-
-- You can access to this example :doc:`here <nose_detector>`
-
-NuboMouthDetector
-=================
-
-- You can access to this example :doc:`here <mouth_detector>`
-
-NuboEyeDetector
-===============
-
-- You can access to this example :doc:`here <eye_detector>`
-
-NuboEarDetector
-===============
-
-- You can access to this example :doc:`here <ear_detector>`
-
-NuboFaceProfile
-===============
-
-- You can access to this example :doc:`here <face_profile>`
-
-NuboTracker
-===========
-
-- You can access to this example :doc:`here <tracker>`
+   face_detector.rst
+   nose_detector.rst
+   mouth_detector.rst
+   eye_detector.rst
+   ear_detector.rst
+   face_profile.rst
+   face_profile.rst
+   tracker.rst
