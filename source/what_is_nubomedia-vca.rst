@@ -29,7 +29,7 @@ filters to their pipelines.
 
 Through this documentation you can learn how to install
 :doc:`install <installation_guide>`, develop using the API of the following
-:doc:`installVCA filters <filters>` of the NUBOMEDIA project:
+filters of the NUBOMEDIA project:
 
 - Face Detector
 - Mouth Detector
@@ -38,5 +38,5 @@ Through this documentation you can learn how to install
 - Ear Detector
 - Tracker
 
-Futhermore, you can find information about :doc:`demos <demos>` in order to test
-the different filters.
+Futhermore, you can find information about demos in order to test the different
+filters.

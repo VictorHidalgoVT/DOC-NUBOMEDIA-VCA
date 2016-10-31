@@ -155,8 +155,8 @@ In the designed protocol there are three different kinds of incoming messages to
 the Server: start, show_faces, show_mouths, show_noses, show_eyes,
 scale_factor, process_num_frames, face_resolution, mouth_resolution,
 nose_resolution, eye_resolution, width_to_process,  stop and onIceCandidates.
-These messages are treated in the switch clause, taking the proper
- steps in each case.
+These messages are treated in the switch clause, taking the proper steps in
+each case.
 
 .. sourcecode:: java
    
