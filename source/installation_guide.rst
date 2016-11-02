@@ -53,7 +53,8 @@ After cloning the repo is time to compile, follow these instructions
 
 .. sourcecode:: console
 
-  cd nubo-vca/ sh build.sh
+   cd nubo-vca/
+   sh build.sh
 
 If everything goes well, a new folder with the following content has been
 generated
