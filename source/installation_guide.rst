@@ -32,11 +32,9 @@ here. When asked for any kind of confirmation, reply affirmatively:
 .. sourcecode:: console
 
    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F04B5A6F
-   add-apt-repository "deb http://repository.nubomedia.eu/ trusty main" apt-get
-   update -y apt-get install nubo-face-detector nubo-face-detector-dev
-   nubo-mouth-detector nubo-mouth-detector-dev nubo-nose-detector
-   nubo-nose-detector-dev nubo-eye-detector nubo-eye-detector-dev nubo-tracker
-   nubo-tracker-dev  nubo-ear-detector nubo-ear-detector-dev -y
+   add-apt-repository "deb http://repository.nubomedia.eu/ trusty main"
+   apt-get update -y
+   apt-get install nubo-face-detector nubo-face-detector-dev nubo-mouth-detector nubo-mouth-detector-dev nubo-nose-detector nubo-nose-detector-dev nubo-eye-detector nubo-eye-detector-dev nubo-tracker nubo-tracker-dev nubo-ear-detector nubo-ear-detector-dev -y
 
 Installing filters and demos from source code
 =============================================
