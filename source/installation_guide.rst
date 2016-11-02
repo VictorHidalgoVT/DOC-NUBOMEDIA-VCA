@@ -19,7 +19,7 @@ Before beginning these parts, you need to install the following packages:
    wget -O - http://ubuntu.kurento.org/kurento.gpg.key | sudo apt-key add -
    sudo apt-get update
    sudo apt-get install kurento-media-server-6.0 kurento-media-server-6.0-dev
-   sudo apt-get install kms-core-6.0 kms-core-6.0
+   sudo apt-get install kms-core-6.0 kms-core-6.0-dev
    sudo apt-get install cimg-dev
 
 Installing filters from nubomedia repositories
