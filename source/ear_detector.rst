@@ -76,7 +76,7 @@ the server-side we use a Java EE application server consuming a  Client API to
 control the  Media Server capabilities. To communicate these entities, two
 WebSockets are used. First, a WebSocket is created between client and
 application server to implement a custom signaling protocol. Second, another
-WebSocket is used to perform the communication between the Java Client and the 
+WebSocket is used to perform the communication between the Java Client and the
 Media Server. To communicate the client with the Java EE application server the
 platform uses a simple signaling protocol based on JSON messages over
 WebSocket‘s. SDP and ICE candidates needs to be exchanged between client and
@@ -414,12 +414,10 @@ Kurento  utility library (kurento-utils) for the client-side.
       <dependency>
          <groupId>org.kurento</groupId>
          <artifactId>kurento-client</artifactId>
-         <version>|CLIENT_JAVA_VERSION|</version>
       </dependency> 
       <dependency> 
          <groupId>org.kurento</groupId>
          <artifactId>kurento-utils-js</artifactId>
-         <version>|CLIENT_JAVA_VERSION|</version>
       </dependency> 
    </dependencies>
 
@@ -448,13 +446,3 @@ Ubuntu machine as follows:
    curl -sL https://deb.nodesource.com/setup | sudo bash -
    sudo apt-get install -y nodejs
    sudo npm install -g bower
-
-.. note::
-
-   *kurento-utils-js* can be resolved as a Java dependency but also is available on Bower. To use this library from Bower, add this dependency to the file bower.json:
-
-   .. sourcecode:: js
-
-      "dependencies": {
-         "kurento-utils": "|UTILS_JS_VERSION|"
-      }
