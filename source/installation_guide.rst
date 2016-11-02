@@ -15,12 +15,12 @@ Before beginning these parts, you need to install the following packages:
 
 .. sourcecode:: console
 
-  echo "deb http://ubuntu.kurento.org trusty kms6" | sudo tee
-  /etc/apt/sources.list.d/kurento.list wget -O -
-  http://ubuntu.kurento.org/kurento.gpg.key | sudo apt-key add - sudo apt-get
-  update sudo apt-get install kurento-media-server-6.0
-  kurento-media-server-6.0-dev sudo apt-get install kms-core-6.0 kms-core-6.0
-  sudo apt-get install cimg-dev
+   echo "deb http://ubuntu.kurento.org trusty kms6" | sudo tee /etc/apt/sources.list.d/kurento.list
+   wget -O - http://ubuntu.kurento.org/kurento.gpg.key | sudo apt-key add -
+   sudo apt-get update
+   sudo apt-get install kurento-media-server-6.0 kurento-media-server-6.0-dev
+   sudo apt-get install kms-core-6.0 kms-core-6.0
+   sudo apt-get install cimg-dev
 
 Installing filters from nubomedia repositories
 ==============================================
@@ -31,12 +31,12 @@ here. When asked for any kind of confirmation, reply affirmatively:
 
 .. sourcecode:: console
 
-  apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F04B5A6F
-  add-apt-repository "deb http://repository.nubomedia.eu/ trusty main" apt-get
-  update -y apt-get install nubo-face-detector nubo-face-detector-dev
-  nubo-mouth-detector nubo-mouth-detector-dev nubo-nose-detector
-  nubo-nose-detector-dev nubo-eye-detector nubo-eye-detector-dev nubo-tracker
-  nubo-tracker-dev  nubo-ear-detector nubo-ear-detector-dev -y
+   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F04B5A6F
+   add-apt-repository "deb http://repository.nubomedia.eu/ trusty main" apt-get
+   update -y apt-get install nubo-face-detector nubo-face-detector-dev
+   nubo-mouth-detector nubo-mouth-detector-dev nubo-nose-detector
+   nubo-nose-detector-dev nubo-eye-detector nubo-eye-detector-dev nubo-tracker
+   nubo-tracker-dev  nubo-ear-detector nubo-ear-detector-dev -y
 
 Installing filters and demos from source code
 =============================================
