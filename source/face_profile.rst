@@ -11,39 +11,19 @@ media stream going from client to the media server and back to client).
 Compiling & Running
 ===================
 
-This section explain how to compile and run the demo in a local environment. To
-install the neccesary software please see the
-:doc:`installation guide <installation_guide>`. To compile you have to options:
-
-- To compile everything as it has been explained on the
-  :doc:`installation guide <installation_guide>`
-- To compile only this module. Again, here we have two different options
+This section explain how to compile and run this tutorial in a local
+environment. To install the necessary software please see the
+:doc:`installation guide <installation_guide>`. To compile and run this
+tutorial from the source code you can use the following commands:
 
 .. sourcecode:: console
 
-   cd apps/NuboFaceProfileJava
-   --First option
-   sh generate_zip.sh
+   git clone https://github.com/nubomedia/NUBOMEDIA-VCA.git
+   cd NUBOMEDIA-VCA/apps/NuboFaceProfileJava
+   mvn spring-boot:run
 
-   --Second option
-   mvn package
-
-If we follow the steps explained on the
-:doc:`installation guide <installation_guide>` , once we restart the media
-server through the command bellow or reboot the computer, we can test the
-application accesing the following URL: **localhost:8105**
-
-.. sourcecode:: console
-
-   sudo /etc/init.d/kurento-media-server restart
-
-For the second option, we can run the aplication through the following  command.
-At this time, the url for accesing the application is: **localhost:8080**
-
-.. sourcecode:: console
-
-   java -jar target/NuboFaceProfileJava*.jar
-
+At this point we can test the application accessing the following URL:
+`https://localhost:8443/ <https://localhost:8443/>`_.
 
 Understanding this example
 ==========================
@@ -53,7 +33,6 @@ The following figure shows a screenshoot of this demo running.
    :alt:    face profile application
    :align:  center
    :width:  640
-
 
 The interface of the application (an HTML web page) is composed by two HTML5
 video tags: one showing the local stream (as captured by the device webcam) and
@@ -329,7 +308,6 @@ when an exception is caught in the server-side.
 	 }
 	}
 
-
 Application Client Side
 =======================
 
@@ -385,7 +363,6 @@ WebRTC communication.
 	 }
 	}
 
-
 	function start() {
 	 console.log("Starting video call ...")
 	  // Disable start button
@@ -429,15 +406,15 @@ WebRTC communication.
 	 sendMessage(message);
 	}
 
-
 Dependencies
 ============
 
 This Java Spring application is implemented using Maven. The relevant part of
 the pom.xml is where NUBOMEDIA dependencies are declared.  we need  two
 dependencies:  the Client Java dependency (kurento-client) and the JavaScript
-Kurento utility library (kurento-utils) for the client-side.
-
+Kurento utility library (kurento-utils) for the client-side. Browser
+dependencies (i.e. *bootstrap*, *ekko-lightbox*, and *adapter.js*) are handled
+with `Webjars <http://www.webjars.org/>`_.
 
 .. sourcecode:: xml 
 
@@ -456,25 +433,3 @@ Kurento utility library (kurento-utils) for the client-side.
 
    We are in active development. You can find the latest version of
    Kurento Java Client at `Maven Central <http://search.maven.org/#search%7Cga%7C1%7Ckurento-client>`_.
-
-Kurento Java Client has a minimum requirement of **Java 7**. To configure the
-application to use Java 7, we have to include the following properties in the
-properties section:
-
-
-.. sourcecode:: xml 
-
-   <maven.compiler.target>1.7</maven.compiler.target>
-   <maven.compiler.source>1.7</maven.compiler.source>
-
-Browser dependencies (i.e. *bootstrap*, *ekko-lightbox*, and *adapter.js*) are
-handled with `Bower <http://bower.io/>`_. This dependencies are defined in the
-file bower.json. The command ``bower install`` is automatically called from
-Maven. Thus, Bower should be present in your system. It can be installed in an
-Ubuntu machine as follows:
-
-.. sourcecode:: sh
-
-   curl -sL https://deb.nodesource.com/setup_4.x | sudo bash -
-   sudo apt-get install -y nodejs
-   sudo npm install -g bower
