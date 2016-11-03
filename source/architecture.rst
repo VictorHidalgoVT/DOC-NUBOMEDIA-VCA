@@ -32,7 +32,7 @@ three different modules:
   receiving commands for creating specific filters.
 
 .. image:: images/browsers.jpg
-   :alt:    Creating vca filtrs for Nubomedia Project
+   :alt:    VCA filters for NUBOMEDIA
    :align:  center
    :width:  480
 

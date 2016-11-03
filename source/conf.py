@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'nubomedia-vca'
+project = u'NUBOMEDIA-VCA'
 copyright = u'2016, NUBOMEDIA'
 author = u'NUBOMEDIA'
 

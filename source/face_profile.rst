@@ -4,10 +4,9 @@
 Face Profile
 %%%%%%%%%%%%
 
-This web application  consists on a pipeline composed by  a WebRTC video
+This web application  consists on a pipeline composed by a WebRTC video
 communication with an face, mouth, nose and eye detector filter (loopback, the
 media stream going from client to the media server and back to client).
-
 
 Compiling & Running
 ===================

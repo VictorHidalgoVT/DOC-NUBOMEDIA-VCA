@@ -4,7 +4,7 @@
 Ear Detector
 %%%%%%%%%%%%
 
-This web application  consists on a WebRTC video communication with a ear
+This web application consists on a WebRTC video communication with a ear
 detector filter (loopback, the media stream going from client to the media
 server and back to client).
 

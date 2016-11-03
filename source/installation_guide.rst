@@ -4,14 +4,58 @@
 Installation guide
 %%%%%%%%%%%%%%%%%%
 
-This sections is divided into parts. On the one hand, we will see how to install
-the filters using the repositories of the project. On the other hand we will
-see how to install the filters as both demos from source code.
+This section is divided into several parts. First, we see how to install the
+NUBOMEDIA-VCA filters using the repositories of the project. Second, we see how
+to install these filters from the source code. Finally, we see how to run the
+demos from the source code.
 
-Previous steps
-==============
+Installing NUBOMEDIA-VCA filters from repositories
+==================================================
 
-Before beginning these parts, you need to install the following packages:
+In order to install the latest stable version of the NUBOMEDIA-VCA filters in
+your local environment, first of all you need an instance of Kurento Media
+Server installed in your machine. To do that, use the following commands:
+
+.. sourcecode:: console
+
+   echo "deb http://ubuntu.kurento.org trusty kms6" | sudo tee /etc/apt/sources.list.d/kurento.list
+   wget -O - http://ubuntu.kurento.org/kurento.gpg.key | sudo apt-key add -
+   sudo apt-get update
+   sudo apt-get install kurento-media-server-6.0
+
+Then you are able to install the NUBOMEDIA-VCA filters. To do that, you have
+type the following commands:
+
+.. sourcecode:: console
+
+   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F04B5A6F
+   add-apt-repository "deb http://repository.nubomedia.eu/ trusty main"
+   sudo apt-get update -y
+
+   # To install ear detector filter
+   sudo apt-get install nubo-ear-detector nubo-ear-detector-dev  -y
+
+   # To install eye detector filter
+   sudo apt-get install nubo-eye-detector nubo-eye-detector-dev -y
+
+   # To install face detector filter
+   sudo apt-get install nubo-face-detector nubo-face-detector-dev -y
+
+   # To install mouth detector filter
+   sudo apt-get install nubo-mouth-detector nubo-mouth-detector-dev -y
+
+   # To install nose detector filter
+   sudo apt-get install nubo-nose-detector nubo-nose-detector-dev -y
+
+   # To install tracker filter
+   sudo apt-get install nubo-tracker nubo-tracker-dev -y
+
+Installing NUBOMEDIA-VCA filters from source code
+=================================================
+
+In order to install the NUBOMEDIA-VCA from the source code you need the
+development packages for Kurento. To install these components use the following
+commands:
 
 .. sourcecode:: console
 
@@ -21,103 +65,106 @@ Before beginning these parts, you need to install the following packages:
    sudo apt-get install kurento-media-server-6.0 kurento-media-server-6.0-dev
    sudo apt-get install kms-core-6.0 kms-core-6.0-dev
    sudo apt-get install cimg-dev
+   sudo apt-get install devscripts
 
-Installing filters from nubomedia repositories
-==============================================
-
-In order to isntall the latest stable version of the NUBOMEDIA-vca filters, you
-have type the following commands, one at time and in the same order as listed
-here. When asked for any kind of confirmation, reply affirmatively:
-
-.. sourcecode:: console
-
-   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F04B5A6F
-   add-apt-repository "deb http://repository.nubomedia.eu/ trusty main"
-   apt-get update -y
-   apt-get install nubo-face-detector nubo-face-detector-dev nubo-mouth-detector nubo-mouth-detector-dev nubo-nose-detector nubo-nose-detector-dev nubo-eye-detector nubo-eye-detector-dev nubo-tracker nubo-tracker-dev nubo-ear-detector nubo-ear-detector-dev -y
-
-Installing filters and demos from source code
-=============================================
-
-In this section, we will see how to install all modules and demos from the
-source code. For this purpose, you need to clone the official repository on
-`GitHub  <https://github.com/nubomedia/NUBOMEDIA-VCA>`__ .
+After that, you are able to generate the Debian packages of the NUBOMEDIA-VCA
+filters from the source code. To do that, you need to clone the official
+repository on `GitHub <https://github.com/nubomedia/NUBOMEDIA-VCA>`__ and the
+execute the build script.
 
 .. sourcecode:: console
 
-  git clone https://github.com/nubomedia/NUBOMEDIA-VCA.git nubo-vca
+   git clone https://github.com/nubomedia/NUBOMEDIA-VCA.git
+   cd NUBOMEDIA-VCA
+   ./build.sh
 
-After cloning the repo is time to compile, follow these instructions
-
-.. sourcecode:: console
-
-   cd nubo-vca/
-   sh build.sh
-
-If everything goes well, a new folder with the following content has been
-generated
+If everything goes well, a new folder called `output` will be created. Inside
+this folder you can find the Debian packages for the different filters. To
+install these filters, you need to run the following commands:
 
 .. sourcecode:: console 
 
-	 output/
-	 ├── apps
-	 │   ├── NuboEarJava.zip
-	 │   ├── NuboEyeJava.zip
-	 │   ├── NuboFaceJava.zip
-	 │   ├── NuboFaceProfileJava.zip
-	 │   ├── NuboMouthJava.zip
-	 │   ├── NuboNoseJava.zip
-	 │   └── NuboTrackerJava.zip
-	 └── packages
-	     ├── nubo-ear-detector_0.0.4~rc1_amd64.deb
-	     ├── nubo-ear-detector-dev_0.0.4~rc1_amd64.deb
-	     ├── nubo-eye-detector_0.0.4~rc1_amd64.deb
-	     ├── nubo-eye-detector-dev_0.0.4~rc1_amd64.deb
-	     ├── nubo-face-detector_0.0.4~rc1_amd64.deb
-	     ├── nubo-face-detector-dev_0.0.4~rc1_amd64.deb
-	     ├── nubo-mouth-detector_0.0.4~rc1_amd64.deb
-	     ├── nubo-mouth-detector-dev_0.0.4~rc1_amd64.deb
-	     ├── nubo-nose-detector_0.0.4~rc1_amd64.deb
-	     ├── nubo-nose-detector-dev_0.0.4~rc1_amd64.deb
-	     ├── nubo-tracker_0.0.4~rc1_amd64.deb
-	     └── nubo-tracker-dev_0.0.4~rc1_amd64.deb
+   cd output
 
-For install the filters, you need to run the following commands:
+   # To install ear detector filter
+   sudo dpkg -i nubo-ear-detector_6.6.0~rc1_amd64.deb nubo-ear-detector-dev_6.6.0~rc1_amd64.deb
+
+   # To install eye detector filter
+   sudo dpkg -i nubo-eye-detector_6.6.0~rc1_amd64.deb nubo-eye-detector-dev_6.6.0~rc1_amd64.deb
+
+   # To install face detector filter
+   sudo dpkg -i nubo-face-detector_6.6.0~rc1_amd64.deb nubo-face-detector-dev_6.6.0~rc1_amd64.deb
+
+   # To install mouth detector filter
+   sudo dpkg -i nubo-mouth-detector_6.6.0~rc1_amd64.deb nubo-mouth-detector-dev_6.6.0~rc1_amd64.deb
+
+   # To install nose detector filter
+   sudo dpkg -i nubo-nose-detector_6.6.0~rc1_amd64.deb nubo-nose-detector-dev_6.6.0~rc1_amd64.deb
+
+   # To install tracker filter
+   sudo dpkg -i nubo-tracker_6.6.0~rc1_amd64.deb nubo-tracker-dev_6.6.0~rc1_amd64.deb
+
+Running NUBOMEDIA-VCA demos from source code
+============================================
+
+Within the
+`GitHub NUBOMEDIA-vca repository <https://github.com/nubomedia/NUBOMEDIA-VCA>`__
+you can find also several demos ready to be executed. By default, this demos
+uses a local Kurento Media Server with the proper filter installed. These demos
+are the following:
+
+- :doc:`Ear detector <ear_detector>`. This web application consists on a
+  WebRTC video communication with a **ear detector filter**.
+
+- :doc:`Eye detector <eye_detector>`. This web application consists on a
+  WebRTC video communication with a **eye detector filter**.
+
+- :doc:`Face detector <face_detector>`. This web application  consists on a
+  WebRTC video communication with a **face detector filter**.
+
+- :doc:`Face profile <face_profile>`. This web application consists on a
+  pipeline composed by a WebRTC video communication with
+  **face, mouth, nose and eye detector filter**
+
+- :doc:`Mouth detector <mouth_detector>`. This web application consists on a
+  WebRTC video communication with a **mouth detector filter**.
+
+- :doc:`Nose detector <nose_detector>`. This web application consists on a
+  WebRTC video communication with a **nose detector filter**.
+
+- :doc:`Tracker <tracker>`. This web application  consists on a WebRTC video
+  communication with a **tracker detector filter**.
+
+In order to execute these demos you need to execute these commands:
 
 .. sourcecode:: console 
 
-   cd output/packages
-   sudo dpkg -i nubo-ear-detector_0.0.4~rc1_amd64.deb nubo-ear-detector-dev_0.0.4~rc1_amd64.deb
-   nubo-eye-detector_0.0.4~rc1_amd64.deb nubo-eye-detector-dev_0.0.4~rc1_amd64.deb
-   nubo-face-detector_0.0.4~rc1_amd64.deb nubo-face-detector-dev_0.0.4~rc1_amd64.deb
-   nubo-mouth-detector_0.0.4~rc1_amd64.deb nubo-mouth-detector-dev_0.0.4~rc1_amd64.deb
-   nubo-nose-detector_0.0.4~rc1_amd64.deb nubo-nose-detector-dev_0.0.4~rc1_amd64.deb
-   nubo-tracker_0.0.4~rc1_amd64.deb nubo-tracker-dev_0.0.4~rc1_amd64.deb
+   git clone https://github.com/nubomedia/NUBOMEDIA-VCA.git
    
-For install the demos, you need to run the following commands for every zip file
-contained in the output/apps folder. We will make the example for the face
-detector
+   # To run ear detector demo
+   cd NUBOMEDIA-VCA/apps/NuboEarJava
+   mvn spring-boot:run
 
-.. sourcecode:: console 
+   # To run eye detector demo
+   cd NUBOMEDIA-VCA/apps/NuboEyeJava
+   mvn spring-boot:run
 
-   cd output/apps
-   mkdir face
-   mv NuboFaceJava.zip face/
-   unzip -x NuboFaceJava.zip
-   sudo sh install.sh
+   # To run face detector demo
+   cd NUBOMEDIA-VCA/apps/NuboFaceJava
+   mvn spring-boot:run
 
-Run the demos
-=============
+   # To run face profile demo
+   cd NUBOMEDIA-VCA/apps/NuboFaceProfileJava
+   mvn spring-boot:run
 
-To run the difference demos, you need to acces the following url's through a web
-browser compliant with WebRTC.
+   # To run mouth detector demo
+   cd NUBOMEDIA-VCA/apps/NuboMouthJava
+   mvn spring-boot:run
 
-.. sourcecode:: console 
+   # To run nose detector demo
+   cd NUBOMEDIA-VCA/apps/NuboNoseJava
+   mvn spring-boot:run
 
-  - localhost:8100 => Face detector
-  - localhost:8102 => Nose detector
-  - localhost:8103 => Mouth detector
-  - localhost:8104 => Ear detector
-  - localhost:8105 => Face profile
-  - localhost:8107 => Tracker
-  - localhost:8108 => Eye detector
+   # To run tracker demo
+   cd NUBOMEDIA-VCA/apps/NuboTrackerJava
+   mvn spring-boot:run

@@ -1,8 +1,8 @@
-Welcome to nubomedia-vca's documentation!
-=========================================
+Welcome to NUBOMEDIA-VCA documentation!
+=======================================
 
 .. image:: images/cv.jpg
-   :alt:    Creating vca filtrs for Nubomedia Project
+   :alt:    VCA filters for NUBOMEDIA
    :align:  center
    :width:  240
 
@@ -17,4 +17,3 @@ Contents
    developers_guide.rst
    APIs.rst
    architecture.rst
-

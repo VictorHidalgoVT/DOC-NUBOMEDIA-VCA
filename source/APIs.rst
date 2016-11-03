@@ -5,7 +5,7 @@ Reference documentation of the APIs
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 On this section, we will see the different APIs to use every single filter. As
-it was explained on :doc:`what is nubomedia-vca <what_is_nubomedia-vca>`, the
+it was explained on :doc:`What is NUBOMEDIA-VCA <what_is_nubomedia-vca>`, the
 following filters are available to use in the NUBOMEDIA platform:
 
 - Face Detector
