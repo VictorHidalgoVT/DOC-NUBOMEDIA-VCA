@@ -4,13 +4,12 @@
 Installation guide
 %%%%%%%%%%%%%%%%%%
 
-This section is divided into several parts. First, we see how to install the
-NUBOMEDIA-VCA filters using the repositories of the project. Second, we see how
-to install these filters from the source code. Finally, we see how to run the
-demos from the source code.
+This section is divided in two parts. On the one hand, we see how to install the
+NUBOMEDIA-VCA filters using the repositories of the project. On the other hand,
+we see how to install these filters from the source code.
 
-Installing NUBOMEDIA-VCA filters from repositories
-==================================================
+From repositories
+=================
 
 In order to install the latest stable version of the NUBOMEDIA-VCA filters in
 your local environment, first of all you need an instance of Kurento Media
@@ -50,8 +49,8 @@ type the following commands:
    # To install tracker filter
    sudo apt-get install nubo-tracker nubo-tracker-dev -y
 
-Installing NUBOMEDIA-VCA filters from source code
-=================================================
+From source code
+================
 
 In order to install the NUBOMEDIA-VCA from the source code you need the
 development packages for Kurento. To install these components use the following
@@ -103,68 +102,3 @@ install these filters, you need to run the following commands:
 
    # To install tracker filter
    sudo dpkg -i nubo-tracker_6.6.0~rc1_amd64.deb nubo-tracker-dev_6.6.0~rc1_amd64.deb
-
-Running NUBOMEDIA-VCA demos from source code
-============================================
-
-Within the
-`GitHub NUBOMEDIA-vca repository <https://github.com/nubomedia/NUBOMEDIA-VCA>`__
-you can find also several demos ready to be executed. By default, this demos
-uses a local Kurento Media Server with the proper filter installed. These demos
-are the following:
-
-- :doc:`Ear detector <ear_detector>`. This web application consists on a
-  WebRTC video communication with a **ear detector filter**.
-
-- :doc:`Eye detector <eye_detector>`. This web application consists on a
-  WebRTC video communication with a **eye detector filter**.
-
-- :doc:`Face detector <face_detector>`. This web application  consists on a
-  WebRTC video communication with a **face detector filter**.
-
-- :doc:`Face profile <face_profile>`. This web application consists on a
-  pipeline composed by a WebRTC video communication with
-  **face, mouth, nose and eye detector filter**
-
-- :doc:`Mouth detector <mouth_detector>`. This web application consists on a
-  WebRTC video communication with a **mouth detector filter**.
-
-- :doc:`Nose detector <nose_detector>`. This web application consists on a
-  WebRTC video communication with a **nose detector filter**.
-
-- :doc:`Tracker <tracker>`. This web application  consists on a WebRTC video
-  communication with a **tracker detector filter**.
-
-In order to execute these demos you need to execute these commands:
-
-.. sourcecode:: console 
-
-   git clone https://github.com/nubomedia/NUBOMEDIA-VCA.git
-   
-   # To run ear detector demo
-   cd NUBOMEDIA-VCA/apps/NuboEarJava
-   mvn spring-boot:run
-
-   # To run eye detector demo
-   cd NUBOMEDIA-VCA/apps/NuboEyeJava
-   mvn spring-boot:run
-
-   # To run face detector demo
-   cd NUBOMEDIA-VCA/apps/NuboFaceJava
-   mvn spring-boot:run
-
-   # To run face profile demo
-   cd NUBOMEDIA-VCA/apps/NuboFaceProfileJava
-   mvn spring-boot:run
-
-   # To run mouth detector demo
-   cd NUBOMEDIA-VCA/apps/NuboMouthJava
-   mvn spring-boot:run
-
-   # To run nose detector demo
-   cd NUBOMEDIA-VCA/apps/NuboNoseJava
-   mvn spring-boot:run
-
-   # To run tracker demo
-   cd NUBOMEDIA-VCA/apps/NuboTrackerJava
-   mvn spring-boot:run
