@@ -14,16 +14,98 @@ in two scenarios:
 1. Using your own instance of Kurento Media Server with the proper filter
 installed. If this is your case, please take a look to the
 :doc:`installation guide <installation_guide>` for further information about
-filter instllation
+filter installation.
 
 2. Using the NUBOMEDIA PaaS to host your application. If this is your case, you
 don't need to worry about the filter installation since the platform has these
 filters installed out of the box. In this case, you need to use the proper Java
 dependency in your application. To add this dependency, first you need to
-include the following directive in your pom.xml:
+include the following directive in your pom.xml (this part is a must to locate
+the NUBOMEDIA-VCA Maven artifacts):
 
-Face, Mouth, Nose, Eye and Ear Detector
-=======================================
+.. sourcecode:: xml
+
+   <repositories>
+      <repository>
+         <id>kurento-releases</id>
+         <name>Kurento Repository</name>
+         <url>http://maven.kurento.org/releases</url>
+         <releases>
+            <enabled>true</enabled>
+         </releases>
+         <snapshots>
+            <enabled>false</enabled>
+         </snapshots>
+      </repository>
+   </repositories>
+
+Then, you will be able to add the proper NUBOMEDIA-VCA Maven artifact, namely:
+
+* Face detector:
+
+.. sourcecode:: xml
+
+      <dependency>
+         <groupId>org.kurento.module</groupId>
+         <artifactId>nubofacedetector</artifactId>
+         <version>6.6.0</version>
+      </dependency>
+
+* Mouth detector:
+
+.. sourcecode:: xml
+
+      <dependency>
+         <groupId>org.kurento.module</groupId>
+         <artifactId>nubomouthdetector</artifactId>
+         <version>6.6.0</version>
+      </dependency>
+
+* Nose detector:
+
+.. sourcecode:: xml
+
+      <dependency>
+         <groupId>org.kurento.module</groupId>
+         <artifactId>nubonosedetector</artifactId>
+         <version>6.6.0</version>
+      </dependency>
+
+* Eye detector:
+
+.. sourcecode:: xml
+
+      <dependency>
+         <groupId>org.kurento.module</groupId>
+         <artifactId>nuboeyedetector</artifactId>
+         <version>6.6.0</version>
+      </dependency>
+
+* Ear detector:
+
+.. sourcecode:: xml
+
+      <dependency>
+         <groupId>org.kurento.module</groupId>
+         <artifactId>nuboeardetector</artifactId>
+         <version>6.6.0</version>
+      </dependency>
+
+* Tracker filter:
+
+.. sourcecode:: xml
+
+      <dependency>
+         <groupId>org.kurento.module</groupId>
+         <artifactId>nubotracker</artifactId>
+         <version>6.6.0</version>
+      </dependency>
+
+The following sections provides information of the Java API provided by each
+NUBOMEDIA-VCA component.
+
+Face, mouth, nose, eye and ear
+==============================
 
 All this filters have a similar API, for this reason, we are going to see all of
 them together.

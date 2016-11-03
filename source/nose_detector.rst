@@ -85,7 +85,7 @@ assume it’s located at localhost listening in port 8888. If you reproduce this
 tutorial you’ll need to insert the specific location of your Kurento Media
 Server instance there.
 
-.. sourcecode:: java 
+.. sourcecode:: java
 
 	@Configuration
 	@EnableWebSocket
