@@ -18,10 +18,11 @@ filter installation.
 
 2. Using the NUBOMEDIA PaaS to host your application. If this is your case, you
 don't need to worry about the filter installation since the platform has these
-filters installed out of the box. In this case, you need to use the proper Java
-dependency in your application. To add this dependency, first you need to
-include the following directive in your pom.xml (this part is a must to locate
-the NUBOMEDIA-VCA Maven artifacts):
+filters installed out of the box.
+
+In any case, you need to use the proper Java dependency in your application. To
+add this dependency, first you need to include the following directive in your
+pom.xml (this part is a must to locate the NUBOMEDIA-VCA Maven artifacts):
 
 .. sourcecode:: xml
 
