@@ -12,8 +12,8 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   what_is_nubomedia-vca.rst
+   introduction.rst
    installation_guide.rst
+   developer_guide.rst
    tutorials.rst
-   APIs.rst
-   architecture.rst
+   advanced_guide.rst

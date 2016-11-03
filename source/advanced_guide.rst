@@ -1,24 +1,22 @@
-.. _architecture:	     
+.. _advanced_guide:
 	     
-%%%%%%%%%%%%
-Architecture
-%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+Advanced guide
+%%%%%%%%%%%%%%
 
 On this section, we give an overview of the NUBOMEDIA architecture, with special
-emphasis on the part of computer vision.
+emphasis on the part of computer vision. Let's start with a simple explanation
+of what NUBOMEDIA is. Imagine a media communication using Skype. But instead of
+using Skype, this time we use web browsers, through a PC, table or mobile
+phone. Now, in the middle of this communication We can introduce different
+boxes or filters. This boxes or filters have a specific functionality. In
+particular, such funcionality is related to media capabilities such as
+encryption, transcoding, computer vision and augmented reality.
 
-Let's start with a simple explanation of what NUBOMEDIA is. Imagine a media
-communication using skype. But instead of using Skype, this time we use web
-browsers, through a PC, table or mobile phone. Now, in the middle of this
-communication We can introduce different boxes or filters. This boxes or
-filters have a specific funcionality. In particular, such funcionality is
-related to media capabilities such as encryption, transcoding, computer vision
-and augmented reality.
-
-At this point, we can differenciate two parts the client part which  runs in the
+At this point, we can differentiate two parts the client part which  runs in the
 browser and the cloud part running over OpenStack which has the logic of the
-application and is capeable of creating the  different filters (multimedia
-capabilities) in the cloud with the specific funcionalities and establish the
+application and is capable of creating the  different filters (multimedia
+capabilities) in the cloud with the specific functionalities and establish the
 corresponding communications among the filters. Therefore we can distinguish
 three different modules:
 

@@ -1,34 +1,39 @@
-.. _APIs:	     
+.. _Developer_guide:
 	     
-%%%%%%%%%%%%%%
-APIs Reference
-%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%
+Developer guide
+%%%%%%%%%%%%%%%
 
 On this section, we will see the different APIs to use every single filter. As
-it was explained on :doc:`What is NUBOMEDIA-VCA <what_is_nubomedia-vca>`, the
-following filters are available to use in the NUBOMEDIA platform:
+it was explained on :doc:`introduction <introduction>`, the following filters
+are available to use in the NUBOMEDIA platform: **face detector**,
+**mouth detector**, **nose detector**, **eye detector**, **ear detector** and
+**tracker filter**. From a developer point of view, these filters can be used
+in two scenarios:
 
-- Face Detector
-- Mouth Detector
-- Nose Detector
-- Eye Detector
-- Ear Detector
-- Tracker
+1. Using your own instance of Kurento Media Server with the proper filter
+installed. If this is your case, please take a look to the
+:doc:`installation guide <installation_guide>` for further information about
+filter instllation
 
-Now, let's see the API for the different filters.
+2. Using the NUBOMEDIA PaaS to host your application. If this is your case, you
+don't need to worry about the filter installation since the platform has these
+filters installed out of the box. In this case, you need to use the proper Java
+dependency in your application. To add this dependency, first you need to
+include the following directive in your pom.xml:
 
 Face, Mouth, Nose, Eye and Ear Detector
 =======================================
 
-All this filters have a similiar API, for this reason, we are going to see all
-of them together.
+All this filters have a similar API, for this reason, we are going to see all of
+them together.
 
 **NuboFaceDetector**
 
 This filter receives a stream of images as input. The output of the filter will
 be a collection of bounding boxes. Each bounding box represents the position of
 each face in the image. A bounding box is an area defined by two points. It is
-very important to highlight that this algorithm only detects frontal faces.
+very important to highlight that this algorithm only detects front faces.
 Therefore, all the faces that are laterally focused will not be detected.
 
 **NuboMouthDetector , NuboNoseDetector, NuboEarDetector, NuboEyeDetector**

@@ -1,8 +1,8 @@
-.. _What_is_nubomedia-vca:
+.. _introduction:
 
-%%%%%%%%%%%%%%%%%%%%%
-What's NUBOMEDIA-VCA?
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%
+Introduction
+%%%%%%%%%%%%
 
 **NUBOMEDIA-VCA** is a part of the `NUBOMEDIA <http://www.nubomedia.eu>`__ ,
 which is the first cloud platform specifically designed for hosting interactive
@@ -18,12 +18,13 @@ network. This part of the project is in charge of the
 different computer vision filters to their media pipelines.
 
 Through this documentation you can learn how to
-:doc:`install <installation_guide>` and :doc:`develop using the API <APIs>` of
-the following filters: **face detector**, **mouth detector**,
-**nose detector**, **eye detector**, **ear detector**, and **tracker filter**.
-Futhermore, you can find information about :doc:`tutorials <tutorials>` in
-order to test the different filters, and also you can read more about the VCA
-:doc:`architecture <architecture>` within NUBOMEDIA.
+:doc:`install <installation_guide>` and
+:doc:`develop using the API <developer_guide>` of the following filters:
+**face detector**, **mouth detector**, **nose detector**, **eye detector**,
+**ear detector**, and **tracker filter**. Futhermore, you can find information
+about :doc:`tutorials <tutorials>` in order to test the different filters, and
+also you can read more about the architecture of VCA filter within NUBOMEDIA in
+the :doc:`advanced guide <advanced_guide>`.
 
 .. image:: images/cv.jpg
    :alt:    Creating vca filtrs for Nubomedia Project
