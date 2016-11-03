@@ -18,8 +18,8 @@ tutorial from the source code you can use the following commands:
 
 .. sourcecode:: console
 
-   git clone https://github.com/nubomedia/NUBOMEDIA-VCA.git
-   cd NUBOMEDIA-VCA/apps/NuboTrackerJava
+   git clone https://github.com/nubomedia/nubomedia-vca-tracker-tutorial
+   cd nubomedia-vca-tracker-tutorial
    mvn spring-boot:run
 
 At this point we can test the application accessing the following URL:

@@ -18,8 +18,8 @@ tutorial from the source code you can use the following commands:
 
 .. sourcecode:: console
 
-   git clone https://github.com/nubomedia/NUBOMEDIA-VCA.git
-   cd NUBOMEDIA-VCA/apps/NuboEyeJava
+   git clone https://github.com/nubomedia/nubomedia-vca-eye-tutorial
+   cd nubomedia-vca-eye-tutorial
    mvn spring-boot:run
 
 At this point we can test the application accessing the following URL:
