@@ -27,27 +27,28 @@ type the following commands:
 
 .. sourcecode:: console
 
-   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F04B5A6F
-   add-apt-repository "deb http://repository.nubomedia.eu/ trusty main"
-   sudo apt-get update -y
+   sudo apt-get install software-properties-common
+   sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F04B5A6F
+   sudo add-apt-repository "deb http://repository.nubomedia.eu/ trusty main"
+   sudo apt-get update
 
    # To install ear detector filter
-   sudo apt-get install nubo-ear-detector nubo-ear-detector-dev  -y
+   sudo apt-get install nubo-ear-detector nubo-ear-detector-dev
 
    # To install eye detector filter
-   sudo apt-get install nubo-eye-detector nubo-eye-detector-dev -y
+   sudo apt-get install nubo-eye-detector nubo-eye-detector-dev
 
    # To install face detector filter
-   sudo apt-get install nubo-face-detector nubo-face-detector-dev -y
+   sudo apt-get install nubo-face-detector nubo-face-detector-dev
 
    # To install mouth detector filter
-   sudo apt-get install nubo-mouth-detector nubo-mouth-detector-dev -y
+   sudo apt-get install nubo-mouth-detector nubo-mouth-detector-dev
 
    # To install nose detector filter
-   sudo apt-get install nubo-nose-detector nubo-nose-detector-dev -y
+   sudo apt-get install nubo-nose-detector nubo-nose-detector-dev
 
    # To install tracker filter
-   sudo apt-get install nubo-tracker nubo-tracker-dev -y
+   sudo apt-get install nubo-tracker nubo-tracker-dev
 
 From source code
 ================
