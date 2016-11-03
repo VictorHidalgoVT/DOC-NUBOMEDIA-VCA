@@ -1,8 +1,8 @@
-.. _developers_guide:	     
-	     
-%%%%%%%%%%%%%%%%
-Developers guide
-%%%%%%%%%%%%%%%%
+.. _tutorials:
+
+%%%%%%%%%
+Tutorials
+%%%%%%%%%
 
 This section contains tutorials showing how to use the different VCA filters.
 Berfore starting with this section, it would be very interesting that you have

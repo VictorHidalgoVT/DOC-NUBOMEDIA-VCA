@@ -14,6 +14,6 @@ Contents
 
    what_is_nubomedia-vca.rst
    installation_guide.rst
-   developers_guide.rst
+   tutorials.rst
    APIs.rst
    architecture.rst

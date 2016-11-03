@@ -1,8 +1,8 @@
 .. _APIs:	     
 	     
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Reference documentation of the APIs
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%
+APIs Reference
+%%%%%%%%%%%%%%
 
 On this section, we will see the different APIs to use every single filter. As
 it was explained on :doc:`What is NUBOMEDIA-VCA <what_is_nubomedia-vca>`, the
