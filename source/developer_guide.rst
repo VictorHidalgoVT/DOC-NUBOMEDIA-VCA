@@ -132,49 +132,64 @@ received as an input.
 The developers can use the following API for this filter:
 
 
-=================================== ===========================================================
- Function                           | Description                                                
------------------------------------ -----------------------------------------------------------
-void **showX(int)** *               | To show or hide the bounding boxes of the detected faces,    
-                                      mouths, ears, noses,
-				    | and eyes within the image. 
-                                    |  
-                                    | Parameter’s value:
-				    |  - 0 (default), the bounding boxes will not be shown.
-				    |  - 1, the bounding boxes will be drawn in the frame
------------------------------------ -----------------------------------------------------------
-void **detectByEvent(int)**         | To indicate to the algorithm if it must process all the
-                                      images or only when
-			            | it receives a specific event such as motion detection. 
-			            | 
-			            | Parameter’s value:
-			            |  - 0 (default) , process all the frames;
-			            |  - 1 , process a frame when it receives a specific event
------------------------------------ -----------------------------------------------------------
-void **sendMetaData(int)**          | To send the bounding boxes of the faces, mouths, eyes
-                                      noses and ears detected to
-				    | another ME as a metadata.
-			            | 
-			            | Parameter’s value:
-			            |  - 0 (default) , metadata are not sent
-			            |  - 1 , metadata are sent
------------------------------------ -----------------------------------------------------------
-void **widthToProcess(int)**        | To indicate the width of the image that the algorithm is 
-                                      going to process to 
-                                    | another ME as a metadata.
-			            | 
-			            | Parameter’s value:
-			            |  - 160 (default), 240, 320, 640 
------------------------------------ -----------------------------------------------------------
-void **processXevery4Frames(int)**  | To indicate the number of frames that the algorithm process
-                                      every 4 frames.
-			            | 
-			            | Parameter’s value:
-			            |  - 1, processes one image and discard 3 (8 fps)
-				    |  - 2, processes two images and discard 2 (12 fps)
-				    |  - 3, processes three images and discard 1 (18 fps)
-				    |  - 4, processes four images  (24 fps)
-=================================== ===========================================================
+=============================================================== ===========================================================
+ Function                                                       | Description
+--------------------------------------------------------------- -----------------------------------------------------------
+void **showX(int)**                                             | To show or hide the bounding boxes of the detected faces,
+                                                                  mouths, ears, noses,
+                                                                | and eyes within the image.
+                                                                |
+                                                                | Parameter’s value:
+                                                                |  - 0 (default), the bounding boxes will not be shown.
+                                                                |  - 1, the bounding boxes will be drawn in the frame
+--------------------------------------------------------------- -----------------------------------------------------------
+void **detectByEvent(int)**                                     | To indicate to the algorithm if it must process all the
+                                                                  images or only when
+                                                                | it receives a specific event such as motion detection.
+                                                                |
+                                                                | Parameter’s value:
+                                                                |  - 0 (default) , process all the frames;
+                                                                |  - 1 , process a frame when it receives a specific event
+--------------------------------------------------------------- -----------------------------------------------------------
+void **sendMetaData(int)**                                      | To send the bounding boxes of the faces, mouths, eyes
+                                                                  noses and ears detected to
+                                                                | another ME as a metadata.
+                                                                |
+                                                                | Parameter’s value:
+                                                                |  - 0 (default) , metadata are not sent
+                                                                |  - 1 , metadata are sent
+--------------------------------------------------------------- -----------------------------------------------------------
+void **widthToProcess(int)**                                    | To indicate the width of the image that the algorithm is
+                                                                  going to process to
+                                                                | another ME as a metadata.
+                                                                |
+                                                                | Parameter’s value:
+                                                                |  - 160 (default), 240, 320, 640
+--------------------------------------------------------------- -----------------------------------------------------------
+void **processXevery4Frames(int)**                              | To indicate the number of frames that the algorithm process
+                                                                  every 4 frames.
+                                                                |
+                                                                | Parameter’s value:
+                                                                |  - 1, processes one image and discard 3 (8 fps)
+                                                                |  - 2, processes two images and discard 2 (12 fps)
+                                                                |  - 3, processes three images and discard 1 (18 fps)
+                                                                |  - 4, processes four images  (24 fps)
+--------------------------------------------------------------- -----------------------------------------------------------
+void **setOverlayedImage(uri, float, float, float, float)**     | Sets the image to use as overlay on the detected element.
+                                                                |
+                                                                | Parameter’s value:
+                                                                |  - 1, URI where the image is located
+                                                                |  - 2, the offset applied to the image, from the X
+                                                                     coordinate of the detected element upper right corner
+                                                                |  - 3, the offset applied to the image, from the Y
+                                                                     coordinate of the detected element upper right corner
+                                                                |  - 4, proportional width of the overlaid image, relative
+                                                                     to the width of the detected element.
+                                                                |  - 5, proportional height of the overlaid image, relative
+                                                                     to the height of the detected element
+--------------------------------------------------------------- -----------------------------------------------------------
+void **unsetOverlayedImage()**                                  | Clear the image to be shown over each detected face.
+=============================================================== ===========================================================
 
 \* **showX** can be depending on the algorithm: showFaces(int), showNoses(int), showMouths(int), showEyes(int), showEars(int).
 
@@ -184,33 +199,32 @@ Tracker
 The developers can use the following API for this filter:
 
 =================================== ===========================================================
- Function                           | Description                                                
+ Function                           | Description
 ----------------------------------- -----------------------------------------------------------
-void **setVisualMode(int)**         | To show or hide the objects detected. 
-			            |  
-			            | Parameter’s value:
+void **setVisualMode(int)**         | To show or hide the objects detected.
+                                    |
+                                    | Parameter’s value:
                                     |  - 0 (default), the bounding boxes will not be shown.
-			            |  - 1, the bounding boxes will be drawn in the frame
+                                    |  - 1, the bounding boxes will be drawn in the frame
 ----------------------------------- -----------------------------------------------------------
-void **setThreshold(int)**          | To set up the minumum difference among pixels to 
+void **setThreshold(int)**          | To set up the minumum difference among pixels to
                                        consider motion
-			            | 
-			            | Parameter’s value:
-			            |  - 0-255 (20 default) 
+                                    |
+                                    | Parameter’s value:
+                                    |  - 0-255 (20 default)
 ----------------------------------- -----------------------------------------------------------
 void **setMinArea(int)**            | To set up the minumum area to consider objects
-			            | 
-			            | Parameter’s value:
-			            |  - 0 - 10000 (50 default) 
+                                    |
+                                    | Parameter’s value:
+                                    |  - 0 - 10000 (50 default)
 ----------------------------------- -----------------------------------------------------------
 void **setMaxArea(int)**            | To set up the maximum area to consider objects
-			            | 
-			            | Parameter’s value:
-			            |  - 0 - 300000 (30000 default)
+                                    |
+                                    | Parameter’s value:
+                                    |  - 0 - 300000 (30000 default)
 ----------------------------------- -----------------------------------------------------------
 void **setDistance(int)**           | To set up the distance among object to merge them
-			            | 
-			            | Parameter’s value:
-			            |  - 0 - 2000 (35 Default) 
+                                    |
+                                    | Parameter’s value:
+                                    |  - 0 - 2000 (35 Default)
 =================================== ===========================================================
-
